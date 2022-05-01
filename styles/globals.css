@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 :root {
-  --theme: #6155ed;
+  --theme: #000;
   --white: #fff;
 }
 
@@ -9,21 +9,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(
-    225.06deg,
-    #00151c 24.31%,
-    #01203e 62.19%,
-    #01484c 99.29%
-  );
-
   min-height: 100vh;
   background-repeat: no-repeat;
   color: #fff;
   overflow-x: hidden;
-}
-
-body p {
-  font-family: "Montserrat", sans-serif;
+  cursor: none;
 }
 
 a {
@@ -81,7 +71,6 @@ img {
   height: 35px;
   width: 35px;
   transition: all 200ms ease-out;
-  display: none;
 }
 
 .cursor2 {
@@ -96,15 +85,118 @@ img {
   height: 7px;
   width: 7px;
   transition: all 0ms ease-out;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vh;
+  height: 100vh;
+  background-color: var(--theme);
+}
+
+.motionButton {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 0.2rem;
+  background: transparent;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 40px 0;
+  margin-right: 20px;
+}
+
+.text-placeholder {
+  /* border-radius: 5px; */
+  width: 200px;
+  height: 50px;
+  margin-left: 2rem;
+  flex: 1;
+}
+
+.text-placeholder:hover {
+  color: black;
+}
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mobileNavbar {
   display: none;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
   .cursor,
   .cursor2 {
     display: none;
   }
   body {
     cursor: auto;
+  }
+}
+
+@media (max-width: 750px) {
+  .mobileNavbar {
+    display: flex;
   }
 }

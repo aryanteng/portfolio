@@ -2,7 +2,7 @@ import * as React from "react";
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
-import { MenuToggle } from "./MenuToggle";
+import MenuToggle from "./MenuToggle";
 import { Navigation } from "./Navigation";
 
 const sidebar = {
@@ -29,7 +29,6 @@ export const Drawer = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-
   return (
     <motion.nav
       initial={false}
@@ -40,7 +39,7 @@ export const Drawer = () => {
     >
       <motion.div className="background" variants={sidebar} />
       <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
+      <MenuToggle toggle={() => toggleOpen()} open={isOpen} />
     </motion.nav>
   );
 };

@@ -1,6 +1,12 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
+import { motion } from "framer-motion";
+import GoogleIcon from "@mui/icons-material/Google";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import { IconButton } from "@mui/material";
 
 function Footer() {
   const date = new Date();
@@ -32,19 +38,47 @@ function Footer() {
         setHover(false);
       }}
     >
-      <div className={styles.wrapper}>
-        <div className={styles.info}>
-          <Link href="/">
-            <h1 style={{ cursor: "pointer" }}>Portfolio</h1>
-          </Link>
-          <Link href="/about-us" passHref={true}>
-            <p className={styles.link}>Connect with me!</p>
-          </Link>
-        </div>
-        <div style={{ marginTop: -1 + "rem", marginLeft: 1 + "rem" }}>
-          <p>Designed and Developed by Aryan Teng ©{year}</p>
-        </div>
+      <div className={styles.info}>
+        <Link href="/" passHref={true}>
+          <motion.h1
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
+          >
+            PORTFOLIO
+          </motion.h1>
+        </Link>
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.25, duration: 0.5, type: "spring" }}
+          className={styles.socialsBox}
+        >
+          <p className={styles.pConnect}>Connect with me!</p>
+          <div className={styles.socials}>
+            <IconButton sx={{ color: "var(--white)" }}>
+              <GoogleIcon sx={{ fontSize: "2rem" }} />
+            </IconButton>
+            <IconButton sx={{ color: "var(--white)" }}>
+              <InstagramIcon sx={{ fontSize: "2rem" }} />
+            </IconButton>
+            <IconButton sx={{ color: "var(--white)" }}>
+              <FacebookIcon sx={{ fontSize: "2rem" }} />
+            </IconButton>
+            <IconButton sx={{ color: "var(--white)" }}>
+              <GitHubIcon sx={{ fontSize: "2rem" }} />
+            </IconButton>
+          </div>
+        </motion.div>
       </div>
+      <motion.p
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
+        className={styles.byLine}
+      >
+        Designed and Developed by Aryan Teng ©{year}
+      </motion.p>
     </div>
   );
 }
