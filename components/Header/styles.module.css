@@ -74,13 +74,8 @@
 }
 
 @media (max-width: 1000px) {
-  .navbar h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
-  }
-  .navbar p {
-    font-size: 0.8rem;
-    margin-bottom: 0;
+  .links {
+    margin-right: 0;
   }
 }
 
