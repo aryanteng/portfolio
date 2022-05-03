@@ -56,18 +56,18 @@ function Footer() {
         >
           <p className={styles.pConnect}>Connect with me!</p>
           <div className={styles.socials}>
-            <IconButton sx={{ color: "var(--white)" }}>
-              <GoogleIcon sx={{ fontSize: "2rem" }} />
-            </IconButton>
-            <IconButton sx={{ color: "var(--white)" }}>
-              <InstagramIcon sx={{ fontSize: "2rem" }} />
-            </IconButton>
-            <IconButton sx={{ color: "var(--white)" }}>
-              <FacebookIcon sx={{ fontSize: "2rem" }} />
-            </IconButton>
-            <IconButton sx={{ color: "var(--white)" }}>
-              <GitHubIcon sx={{ fontSize: "2rem" }} />
-            </IconButton>
+            <Link href="/" passHref={true}>
+              <GoogleIcon className={styles.icon} />
+            </Link>
+            <Link href="/" passHref={true} className={styles.icon}>
+              <InstagramIcon className={styles.icon} />
+            </Link>
+            <Link href="/" passHref={true} className={styles.icon}>
+              <FacebookIcon className={styles.icon} />
+            </Link>
+            <Link href="/" passHref={true} className={styles.icon}>
+              <GitHubIcon className={styles.icon} />
+            </Link>
           </div>
         </motion.div>
       </div>
