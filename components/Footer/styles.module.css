@@ -1,12 +1,14 @@
 .container {
   bottom: 0;
-  background-color: var(--theme);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
-  color: var(--white);
+  color: var(--black);
+  border-top: 1px solid gray;
+  margin-top: 5rem;
 }
 
 .info {
@@ -29,7 +31,7 @@
 }
 
 .icon {
-  color: var(--white);
+  color: var(--black);
   font-size: 2.5rem;
   margin-right: 0.5rem;
 }

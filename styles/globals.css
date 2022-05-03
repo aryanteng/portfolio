@@ -2,6 +2,18 @@
 :root {
   --theme: #4b72ff;
   --white: #fff;
+  --black: #000;
+}
+
+body,
+body[data-theme="dark"] {
+  --white: #000;
+  --black: #fff;
+}
+
+body[data-theme="light"] {
+  --white: #fff;
+  --black: #000;
 }
 
 html,
@@ -11,9 +23,10 @@ body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   background-repeat: no-repeat;
-  color: #000;
+  color: var(--black);
   overflow-x: hidden;
   cursor: none;
+  background-color: var(--white);
 }
 
 a {
@@ -27,7 +40,7 @@ a {
 
 ::selection {
   background-color: var(--theme);
-  color: #fff;
+  color: var(--white);
 }
 
 /* width */
@@ -37,7 +50,7 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: var(--white);
 }
 
 /* Handle */
@@ -100,7 +113,7 @@ nav {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   background-color: var(--theme);
 }
@@ -164,7 +177,7 @@ li {
 }
 
 .text-placeholder:hover {
-  color: black;
+  color: var(--white);
 }
 .refresh {
   padding: 10px;

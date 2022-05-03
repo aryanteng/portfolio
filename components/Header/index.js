@@ -6,34 +6,20 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import ModeButton from "../ModeButton/ModeButton";
 export default function Header() {
-  const [hover, setHover] = useState(false);
+  const [activeTheme, setActiveTheme] = useState("");
+  const inactiveTheme = activeTheme === "light" ? "dark" : "light";
+
+  // Run whenever theme change is toggled
   useEffect(() => {
-    if (hover) {
-      var cursor = document.getElementById("cursor");
-      var cursor2 = document.getElementById("cursor2");
-      document.body.addEventListener("mousemove", function (e) {
-        (cursor.style.border = "2px solid #000 "),
-          (cursor2.style.backgroundColor = "#000");
-      });
-    } else {
-      var cursor = document.getElementById("cursor");
-      var cursor2 = document.getElementById("cursor2");
-      document.body.addEventListener("mousemove", function (e) {
-        (cursor.style.border = "2px solid var(--theme)"),
-          (cursor2.style.backgroundColor = "var(--theme)");
-      });
+    if (activeTheme) {
+      document.body.dataset.theme = activeTheme;
+      window.localStorage.setItem("theme", activeTheme);
     }
-  }, [hover]);
+  }, [activeTheme]);
 
   return (
     <>
-      <div
-        className={styles.navbar}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => {
-          setHover(false);
-        }}
-      >
+      <div className={styles.navbar}>
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -97,11 +83,14 @@ export default function Header() {
           <motion.h1
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
+            transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
             style={{ cursor: "pointer" }}
             className={styles.Heading}
           >
-            PORTFOLIO
+            Portfolio
+            <span style={{ color: "var(--theme)", fontSize: "2.5srem" }}>
+              .
+            </span>
           </motion.h1>
         </Link>
 
@@ -109,8 +98,9 @@ export default function Header() {
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.25, duration: 0.5, type: "spring" }}
+            transition={{ delay: 0.2, duration: 0.5, type: "spring" }}
             className={styles.modeButton}
+            onClick={() => setActiveTheme(inactiveTheme)}
           >
             <ModeButton />
           </motion.div>
@@ -118,7 +108,7 @@ export default function Header() {
             <motion.p
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.25, duration: 0.5, type: "spring" }}
+              transition={{ delay: 0.4, duration: 0.5, type: "spring" }}
               className={styles.link}
             >
               About
@@ -128,7 +118,7 @@ export default function Header() {
             <motion.p
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
+              transition={{ delay: 0.6, duration: 0.5, type: "spring" }}
               className={styles.link}
             >
               Skills
@@ -138,7 +128,7 @@ export default function Header() {
             <motion.p
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
+              transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
               className={styles.link}
             >
               Projects
@@ -157,16 +147,15 @@ export default function Header() {
           </Link>
         </div>
         <Drawer />
-        <div className={styles.mobileModeButton}>
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.25, duration: 0.5, type: "spring" }}
-            className={styles.modeButton}
-          >
-            <ModeButton />
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.25, duration: 0.5, type: "spring" }}
+          className={styles.mobileModeButton}
+          onClick={() => setActiveTheme(inactiveTheme)}
+        >
+          <ModeButton />
+        </motion.div>
       </div>
     </>
   );

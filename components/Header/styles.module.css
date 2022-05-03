@@ -11,10 +11,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--theme);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
+  border-bottom: 1px solid gray;
   height: 5rem;
-  border-bottom: 1px solid var(--white);
 }
 
 .Heading {
@@ -39,8 +39,8 @@
 }
 
 .link:hover {
-  background-color: var(--white);
-  color: var(--theme);
+  background-color: var(--theme);
+  color: var(--white);
   cursor: pointer;
   border-radius: 10px;
   transition: all 0.3s;
@@ -61,14 +61,14 @@
   transition: 0.2s all;
 }
 
-.profileButton {
+/* .profileButton {
   margin-right: 1rem;
   background-color: var(--theme);
   border-radius: 100%;
   border: none;
   outline: none;
   color: var(--white);
-}
+} */
 
 .mobileNavbar {
   display: none;

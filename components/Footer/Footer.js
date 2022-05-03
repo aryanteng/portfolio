@@ -10,48 +10,26 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 function Footer() {
   const date = new Date();
   let year = date.getFullYear();
-  const [hover, setHover] = useState(false);
-
-  useEffect(() => {
-    if (hover) {
-      var cursor = document.getElementById("cursor");
-      var cursor2 = document.getElementById("cursor2");
-      document.body.addEventListener("mousemove", function (e) {
-        (cursor.style.border = "2px solid #000 "),
-          (cursor2.style.backgroundColor = "#000");
-      });
-    } else {
-      var cursor = document.getElementById("cursor");
-      var cursor2 = document.getElementById("cursor2");
-      document.body.addEventListener("mousemove", function (e) {
-        (cursor.style.border = "2px solid var(--theme)"),
-          (cursor2.style.backgroundColor = "var(--theme)");
-      });
-    }
-  }, [hover]);
   return (
-    <div
-      className={styles.container}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => {
-        setHover(false);
-      }}
-    >
+    <div className={styles.container}>
       <div className={styles.info}>
         <Link href="/" passHref={true}>
           <motion.h1
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
+            transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
             style={{ cursor: "pointer" }}
           >
-            PORTFOLIO
+            Portfolio
+            <span style={{ color: "var(--theme)", fontSize: "2.5srem" }}>
+              .
+            </span>
           </motion.h1>
         </Link>
         <motion.div
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.25, duration: 0.5, type: "spring" }}
+          transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
           className={styles.socialsBox}
         >
           <p className={styles.pConnect}>Connect with me!</p>
@@ -74,7 +52,7 @@ function Footer() {
       <motion.p
         initial={{ x: 50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
+        transition={{ delay: 1, duration: 0.5, type: "spring" }}
         className={styles.byLine}
       >
         Designed and Developed by Aryan Teng ©{year}
