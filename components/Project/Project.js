@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./styles.module.css";
+import Image from "next/image";
+import CloseIcon from "@mui/icons-material/Close";
 
 function Project() {
   const items = [
@@ -25,28 +27,30 @@ function Project() {
       subtitle: "helllllooooooo",
     },
   ];
-  const [selectedId, setSelectedId] = useState(null);
-  console.log(selectedId);
+  const [open, setOpen] = useState(false);
   return (
     <div className={styles.container}>
-      {items.map((item, i) => (
-        <motion.div
-          layoutId={item.id}
-          key={i}
-          onClick={() => setSelectedId(item.id)}
-          className={styles.card}
-        >
-          <motion.h2>{item.title}</motion.h2>
-          <motion.h5>{item.subtitle}</motion.h5>
-        </motion.div>
-      ))}
-
+      <motion.div layoutId={1} onClick={() => setOpen(!open)}>
+        <Image
+          src="/weekend.png"
+          width="350"
+          height="350"
+          alt="website image"
+        ></Image>
+        <motion.h2>WhatsApp Clone</motion.h2>
+        <motion.h5>working clone of whatsapp</motion.h5>
+      </motion.div>
       <AnimatePresence>
-        {selectedId && (
-          <motion.div layoutId={selectedId}>
-            <motion.h2>{items[selectedId]?.title}</motion.h2>
-            <motion.h5>{items[selectedId]?.subtitle}</motion.h5>
-            <motion.button onClick={() => setSelectedId(null)} />
+        {open && (
+          <motion.div layoutId={open}>
+            <motion.h2>WhatsApp Clone</motion.h2>
+            <motion.h5>working clone of whatsapp</motion.h5>
+            <motion.button
+              className={styles.button}
+              onClick={() => setOpen(!open)}
+            >
+              <CloseIcon />
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>

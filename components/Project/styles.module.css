@@ -1,12 +1,10 @@
 .container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
 }
-
 .card {
-  width: 40%;
+  width: 50%;
   margin: 10px;
   min-width: 150px;
   display: flex;
@@ -14,4 +12,13 @@
   align-items: center;
   justify-content: space-between;
   border: 2px solid var(--theme);
+}
+
+.button {
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
