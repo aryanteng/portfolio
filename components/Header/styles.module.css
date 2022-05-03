@@ -22,7 +22,7 @@
 }
 
 .links {
-  margin-right: 2rem;
+  margin-right: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +37,7 @@
   border-radius: 10px;
   font-weight: 600;
 }
+
 .link:hover {
   background-color: var(--white);
   color: var(--theme);
@@ -73,9 +74,21 @@
   display: none;
 }
 
+.modeButton {
+  margin-right: 1.5rem;
+}
+
+.mobileModeButton {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .links {
     margin-right: 0;
+  }
+  .links p {
+    padding: 0.5rem 1.2rem;
+    margin: 0;
   }
 }
 

@@ -43,6 +43,7 @@ function Footer() {
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
+            style={{ cursor: "pointer" }}
           >
             PORTFOLIO
           </motion.h1>

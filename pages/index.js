@@ -10,7 +10,6 @@ export default function Home() {
       <Header />
       <div className={styles.container}>
         <Project />
-        <ModeButton />
       </div>
       <Footer />
     </>

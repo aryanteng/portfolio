@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Drawer } from "./Drawer";
 import Head from "next/head";
 import { motion } from "framer-motion";
-
+import ModeButton from "../ModeButton/ModeButton";
 export default function Header() {
   const [hover, setHover] = useState(false);
   useEffect(() => {
@@ -104,8 +104,16 @@ export default function Header() {
             PORTFOLIO
           </motion.h1>
         </Link>
+
         <div className={styles.links}>
-          <div className={styles.buttonElement}></div>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.25, duration: 0.5, type: "spring" }}
+            className={styles.modeButton}
+          >
+            <ModeButton />
+          </motion.div>
           <Link href="/" passHref={true}>
             <motion.p
               initial={{ x: 50, opacity: 0 }}
@@ -149,6 +157,16 @@ export default function Header() {
           </Link>
         </div>
         <Drawer />
+        <div className={styles.mobileModeButton}>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.25, duration: 0.5, type: "spring" }}
+            className={styles.modeButton}
+          >
+            <ModeButton />
+          </motion.div>
+        </div>
       </div>
     </>
   );
