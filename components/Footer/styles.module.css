@@ -9,8 +9,19 @@
   color: var(--white);
 }
 
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.info h1 {
+  padding-bottom: 0.5rem;
+}
+
 .socialsBox {
-  margin-top: 2rem !important;
+  margin-top: 1.8rem !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,13 +43,6 @@
 .pConnect {
   margin: 0;
   font-size: 1.5rem;
-}
-
-.info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 1rem;
 }
 
 @media (max-width: 1050px) {
