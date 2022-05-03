@@ -94,7 +94,7 @@
 
 @media (max-width: 750px) {
   .Heading {
-    margin-left: 0 !important;
+    margin-left: 4rem !important;
   }
   .navbar h1 {
     font-size: 2rem;
@@ -109,9 +109,14 @@
   }
   .mobileNavbar {
     display: flex;
+    align-items: center;
   }
   .navbar {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+  }
+  .mobileModeButton {
+    display: flex;
+    padding-left: 10rem !important;
   }
 }
