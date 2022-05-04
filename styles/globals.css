@@ -22,7 +22,6 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
-  background-repeat: no-repeat;
   color: var(--black);
   overflow-x: hidden;
   cursor: none;
@@ -115,7 +114,7 @@ nav {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--theme);
+  background-color: var(--black);
 }
 
 .motionButton {
@@ -174,10 +173,11 @@ li {
   height: 50px;
   margin-left: 2rem;
   flex: 1;
+  color: var(--white);
 }
 
 .text-placeholder:hover {
-  color: var(--white);
+  color: var(--black);
 }
 .refresh {
   padding: 10px;
@@ -211,5 +211,12 @@ li {
 @media (max-width: 750px) {
   .mobileNavbar {
     display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .motionButton {
+    padding: 0 !important;
+    padding-right: 1rem !important;
   }
 }

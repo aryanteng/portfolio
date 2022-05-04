@@ -4,6 +4,7 @@ import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import MenuToggle from "./MenuToggle";
 import { Navigation } from "./Navigation";
+import Avatar from "@mui/material/Avatar";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -38,7 +39,7 @@ export const Drawer = () => {
       className="mobileNavbar"
     >
       <motion.div className="background" variants={sidebar} />
-      <Navigation />
+      <Navigation open={isOpen} />
       <MenuToggle toggle={() => toggleOpen()} open={isOpen} />
     </motion.nav>
   );

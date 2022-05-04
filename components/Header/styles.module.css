@@ -90,6 +90,9 @@
     padding: 0.5rem 1.2rem;
     margin: 0;
   }
+  .modeButton {
+    margin-right: 1rem !important;
+  }
 }
 
 @media (max-width: 750px) {
@@ -112,11 +115,22 @@
     align-items: center;
   }
   .navbar {
+    display: flex;
     align-items: center;
     justify-content: space-between;
   }
   .mobileModeButton {
     display: flex;
     padding-left: 10rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .Heading {
+    margin-left: 2.5rem !important;
+  }
+  .mobileModeButton {
+    margin-top: 0.5rem;
+    padding-left: 5rem !important;
   }
 }

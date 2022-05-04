@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
+import Avatar from "@mui/material/Avatar";
 
 const variants = {
   open: {
@@ -11,6 +12,10 @@ const variants = {
   },
 };
 const items = [
+  // {
+  //   name: "Display",
+  //   url: "https://i.ibb.co/myvq6GR/aryan.jpg",
+  // },
   {
     name: "About",
     url: "/",
@@ -30,10 +35,21 @@ const items = [
   },
 ];
 
-export const Navigation = () => (
+export const Navigation = (open) => (
   <motion.ul variants={variants}>
-    {items.map((item, i) => (
-      <MenuItem item={item.name} url={item.url} key={i} />
-    ))}
+    {items.map((item, i) => {
+      // if (item.name === "Display") {
+      //   return (
+      //     <Avatar
+      //       alt="Creator"
+      //       src={item.url}
+      //       sx={{ width: "80px", height: "80px" }}
+      //       style={open ? { display: "none" } : { display: "flex" }}
+      //     />
+      //   );
+      // } else {
+      return <MenuItem item={item.name} url={item.url} key={i} />;
+      // }
+    })}
   </motion.ul>
 );

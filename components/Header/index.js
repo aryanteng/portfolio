@@ -5,6 +5,7 @@ import { Drawer } from "./Drawer";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import ModeButton from "../ModeButton/ModeButton";
+
 export default function Header() {
   const [activeTheme, setActiveTheme] = useState("");
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
