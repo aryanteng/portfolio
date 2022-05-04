@@ -37,9 +37,9 @@
 }
 
 .icon:hover {
-  color: rgb(63, 111, 214);
+  color: var(--theme);
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .pConnect {

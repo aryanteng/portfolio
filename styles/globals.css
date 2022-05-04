@@ -5,15 +5,17 @@
   --black: #000;
 }
 
-body,
 body[data-theme="dark"] {
-  --white: #000;
+  --theme: #4b72ff;
+  --white: rgb(7, 7, 7);
   --black: #fff;
 }
 
+body,
 body[data-theme="light"] {
+  --theme: #6499e7;
   --white: #fff;
-  --black: #000;
+  --black: #1b1c1e;
 }
 
 html,
@@ -177,7 +179,7 @@ li {
 }
 
 .text-placeholder:hover {
-  color: var(--black);
+  color: var(--theme);
 }
 .refresh {
   padding: 10px;

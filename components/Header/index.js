@@ -8,7 +8,7 @@ import ModeButton from "../ModeButton/ModeButton";
 
 export default function Header() {
   const [activeTheme, setActiveTheme] = useState("");
-  const inactiveTheme = activeTheme === "light" ? "dark" : "light";
+  const inactiveTheme = activeTheme === "dark" ? "light" : "dark";
 
   // Run whenever theme change is toggled
   useEffect(() => {
