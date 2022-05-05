@@ -38,18 +38,7 @@ const items = [
 export const Navigation = (open) => (
   <motion.ul variants={variants}>
     {items.map((item, i) => {
-      // if (item.name === "Display") {
-      //   return (
-      //     <Avatar
-      //       alt="Creator"
-      //       src={item.url}
-      //       sx={{ width: "80px", height: "80px" }}
-      //       style={open ? { display: "none" } : { display: "flex" }}
-      //     />
-      //   );
-      // } else {
       return <MenuItem item={item.name} url={item.url} key={i} />;
-      // }
     })}
   </motion.ul>
 );

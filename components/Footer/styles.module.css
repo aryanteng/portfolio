@@ -7,7 +7,7 @@
   padding-left: 2rem;
   padding-right: 2rem;
   color: var(--black);
-  border-top: 1px solid gray;
+  border-top: 1px solid var(--grey);
   margin-top: 5rem;
 }
 

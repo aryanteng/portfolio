@@ -1,0 +1,24 @@
+.button {
+  padding: 0.2rem 2rem;
+  border: 2px solid var(--theme);
+  font-family: "Poppins", sans-serif;
+  background-color: var(--theme);
+  color: var(--black);
+  border-radius: 5rem;
+}
+
+.button h1 {
+  font-size: 1rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--theme);
+}
+
+@media (max-width: 400px) {
+  .button {
+    display: none;
+  }
+}

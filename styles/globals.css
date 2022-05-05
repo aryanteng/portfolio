@@ -7,15 +7,17 @@
 
 body[data-theme="dark"] {
   --theme: #4b72ff;
-  --white: rgb(7, 7, 7);
-  --black: #fff;
+  --white: #000;
+  --black: #e7e9ea;
+  --grey: #2f3336;
 }
 
 body,
 body[data-theme="light"] {
   --theme: #6499e7;
   --white: #fff;
-  --black: #1b1c1e;
+  --black: #0f1419;
+  --grey: #cfd9de;
 }
 
 html,
@@ -114,9 +116,9 @@ nav {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 100vw;
+  width: 50vw;
   height: 100vh;
-  background-color: var(--black);
+  background-color: var(--theme);
 }
 
 .motionButton {
@@ -157,6 +159,7 @@ li {
   list-style: none;
   margin-bottom: 20px;
   display: flex;
+
   align-items: center;
   cursor: pointer;
 }
@@ -179,7 +182,7 @@ li {
 }
 
 .text-placeholder:hover {
-  color: var(--theme);
+  color: var(--black);
 }
 .refresh {
   padding: 10px;
