@@ -2,9 +2,12 @@
   padding: 0.2rem 2rem;
   border: 2px solid var(--theme);
   font-family: "Poppins", sans-serif;
-  background-color: var(--theme);
+  background-color: var(--white);
   color: var(--black);
   border-radius: 5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button h1 {
@@ -13,7 +16,7 @@
 
 .button:hover {
   cursor: pointer;
-  background-color: transparent;
+  background-color: var(--theme);
   border: 2px solid var(--theme);
 }
 

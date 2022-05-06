@@ -2,16 +2,20 @@
   margin: 8rem 0rem;
   padding: 0 2rem;
   background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .notifList {
-  position: absolute;
+  position: absolute !important;
   bottom: 0;
   left: 0;
-  top: 0;
+  /* top: 0; */
   width: 350px;
-  background-color: transparent;
-  margin-left: 0.2rem;
+  background-color: var(--white);
+  margin: 1rem !important;
+  margin-left: 0.25rem !important;
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -19,6 +23,7 @@
   border-radius: 1rem;
   padding: 0.2rem 0.4rem;
   border: 2px solid var(--theme);
+  z-index: 200;
 }
 
 .notifList p {

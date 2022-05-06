@@ -143,7 +143,7 @@ export default function Header() {
               transition={{ delay: 1, duration: 0.5, type: "spring" }}
               className={styles.link}
             >
-              Contact
+              Socials
             </motion.p>
           </Link>
         </div>

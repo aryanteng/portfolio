@@ -1,5 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
+import styles from "./styles.module.css";
 
 const variants = {
   open: {
@@ -20,14 +21,15 @@ const variants = {
 
 export const MenuItem = ({ item, url }) => {
   return (
-    <motion.li
+    <motion.div
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      className={styles.li}
     >
       <a href={url} className="text-placeholder">
         {item}
       </a>
-    </motion.li>
+    </motion.div>
   );
 };

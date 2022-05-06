@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import CloseIcon from "@mui/icons-material/Close";
 import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
+import Socials from "../components/Socials";
 
 export default function Home() {
   const [notifications, setNotifications] = useState("");
@@ -16,11 +17,11 @@ export default function Home() {
     <>
       <Header />
       <div className={styles.container}>
-        i will be a god developer
         <CustomButton
           notifications={notifications}
           setNotifications={setNotifications}
         />
+        <Socials />
       </div>
       <AnimatePresence initial={false}>
         {notifications?.length > 1 && (
