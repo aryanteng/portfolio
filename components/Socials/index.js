@@ -1,5 +1,5 @@
 import React from "react";
-import { useMotionValue, Reorder } from "framer-motion";
+import { useMotionValue, Reorder, motion } from "framer-motion";
 import { useState } from "react";
 import styles from "./styles.module.css";
 import { useRaisedShadow } from "./use-raised-shadow";
@@ -41,8 +41,9 @@ function Socials() {
   return (
     <div className={styles.container}>
       <h1 style={{ color: "var(--theme)" }}>Socials</h1>
+      {/* <p style={{ color: "var(--theme)", margin: 0 }}>personal link tree ;)</p> */}
       <Reorder.Group
-        as="ol"
+        as="div"
         axis="y"
         onReorder={setItems}
         values={items}
@@ -50,12 +51,15 @@ function Socials() {
       >
         {items.map((item, i) => (
           <Reorder.Item
+            as="div"
             key={i}
             value={item}
             style={{ boxShadow, y }}
             dragListener={false}
             dragControls={dragControls}
+            onHover={{ scale: 1.5 }}
             className={styles.social}
+            s
           >
             {item.icon}
             <p>{item.name}</p>
