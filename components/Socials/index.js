@@ -5,6 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import ProjectButton from "./ProjectButton";
 import styles from "./styles.module.css";
+import { motion } from "framer-motion";
 
 function Socials() {
   const socials = [
@@ -27,7 +28,13 @@ function Socials() {
   ];
   return (
     <>
-      <h1>Socials</h1>
+      <motion.h1
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
+      >
+        Socials
+      </motion.h1>
       <div className={styles.container}>
         {socials.map((item, i) => {
           return <ProjectButton key={i} icon={item.icon} url={item.url} />;
