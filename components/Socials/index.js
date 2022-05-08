@@ -11,19 +11,19 @@ function Socials() {
   const socials = [
     {
       icon: <GoogleIcon classNamw={styles.icon} />,
-      url: "mailto",
+      url: "/",
     },
     {
       icon: <InstagramIcon className={styles.icon} />,
-      url: "mailto",
+      url: "/",
     },
     {
       icon: <FacebookIcon className={styles.icon} />,
-      url: "mailto",
+      url: "/",
     },
     {
       icon: <GitHubIcon className={styles.icon} />,
-      url: "mailto",
+      url: "/",
     },
   ];
   return (
