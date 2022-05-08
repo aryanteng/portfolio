@@ -21,33 +21,17 @@ function Footer() {
             style={{ cursor: "pointer" }}
           >
             Portfolio
-            <span style={{ color: "var(--theme)", fontSize: "2.5srem" }}>
-              .
-            </span>
+            <span style={{ color: "var(--theme)", fontSize: "2.5rem" }}>.</span>
           </motion.h1>
         </Link>
-        <motion.div
+        <motion.h1
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
-          className={styles.socialsBox}
         >
-          <p className={styles.pConnect}>Connect with me!</p>
-          <div className={styles.socials}>
-            <Link href="/" passHref={true}>
-              <GoogleIcon className={styles.icon} />
-            </Link>
-            <Link href="/" passHref={true} className={styles.icon}>
-              <InstagramIcon className={styles.icon} />
-            </Link>
-            <Link href="/" passHref={true} className={styles.icon}>
-              <FacebookIcon className={styles.icon} />
-            </Link>
-            <Link href="/" passHref={true} className={styles.icon}>
-              <GitHubIcon className={styles.icon} />
-            </Link>
-          </div>
-        </motion.div>
+          Aryan
+          <span style={{ color: "var(--theme)" }}> Teng</span>
+        </motion.h1>
       </div>
       <motion.p
         initial={{ x: 50, opacity: 0 }}

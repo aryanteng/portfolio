@@ -3,10 +3,11 @@
   --theme: #4b72ff;
   --white: #fff;
   --black: #000;
+  /* --theme: #6499e7; */
 }
 
 body[data-theme="dark"] {
-  --theme: #4b72ff;
+  --theme: #949ebb;
   --white: #000;
   --black: #e7e9ea;
   --grey: #2f3336;

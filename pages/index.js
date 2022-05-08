@@ -2,12 +2,12 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer/Footer";
 import Project from "../components/Project/Project";
-import ModeButton from "../components/ModeButton/ModeButton";
 import CustomButton from "../components/CustomButton";
 import { motion, AnimatePresence } from "framer-motion";
 import CloseIcon from "@mui/icons-material/Close";
 import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
+import ProjectButton from "../components/Socials/ProjectButton";
 import Socials from "../components/Socials";
 
 export default function Home() {

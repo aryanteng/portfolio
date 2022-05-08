@@ -1,75 +1,52 @@
 .container {
-  width: 100%;
+  width: 40%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  cursor: pointer;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
-.container p {
+.button {
+  width: 50px;
+  height: 50px;
+  padding: 2rem;
+  border: 2px solid var(--theme);
+  font-family: "Poppins", sans-serif;
+  background-color: var(--white);
   color: var(--black);
-}
-
-.wrapper {
-  width: 90%;
-  height: 100%;
+  border-radius: 5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  margin-top: 1rem;
-  position: relative;
-  overflow: hidden;
 }
 
-.social {
-  width: 60%;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  border: 2px solid var(--grey);
-  padding: 15px 18px;
-  display: flex;
-  background-color: var(--white);
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.social:hover {
+.button:hover {
+  cursor: pointer;
   background-color: var(--theme);
-  transition: 0.2s ease-in;
-}
-
-.iconBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border: 2px solid var(--theme);
 }
 
 .icon {
-  font-size: 2rem !important;
+  font-size: 2rem;
 }
 
-.iconBox:hover {
-  color: var(--theme);
-  transition: 0.3 ease;
-}
-
-.iconBox p:hover {
-  color: var(--theme);
-  transition: 0.3 ease;
-}
-
-@media (max-width: 1000px) {
-  .social {
+@media (max-width: 1050px) {
+  .container {
     width: 70%;
   }
 }
 
-@media (max-width: 500px) {
-  .social {
-    width: 100%;
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    margin-top: -2rem;
+  }
+  .button {
+    padding: 2rem !important;
+    margin-top: 4.5rem;
+  }
+  .icon {
+    font-size: 1.5rem !important;
   }
 }
