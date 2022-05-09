@@ -30,7 +30,7 @@
   }
 
   .info {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .container h1 {

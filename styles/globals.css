@@ -4,10 +4,11 @@
   --white: #fff;
   --black: #000;
   /* --theme: #6499e7; */
+  /* --theme: #465c8d; */
 }
 
 body[data-theme="dark"] {
-  --theme: #949ebb;
+  --theme: #65b2c6;
   --white: #000;
   --black: #e7e9ea;
   --grey: #2f3336;

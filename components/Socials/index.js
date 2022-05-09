@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 function Socials() {
   const socials = [
     {
-      icon: <GoogleIcon classNamw={styles.icon} />,
+      icon: <GoogleIcon className={styles.icon} />,
       url: "/",
     },
     {
@@ -32,6 +32,7 @@ function Socials() {
         initial={{ x: 50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
+        style={{ color: "var(--theme)" }}
       >
         Socials
       </motion.h1>

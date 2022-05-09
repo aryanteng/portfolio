@@ -31,7 +31,13 @@
   font-size: 2rem;
 }
 
-@media (max-width: 1050px) {
+.icon:hover {
+  font-size: 2rem;
+  color: var(--white);
+  transition: 0.2s;
+}
+
+@media (max-width: 1250px) {
   .container {
     width: 70%;
   }

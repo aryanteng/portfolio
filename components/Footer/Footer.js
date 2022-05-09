@@ -2,10 +2,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import { motion } from "framer-motion";
-import GoogleIcon from "@mui/icons-material/Google";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
 
 function Footer() {
   const date = new Date();
@@ -21,16 +17,16 @@ function Footer() {
             style={{ cursor: "pointer" }}
           >
             Portfolio
-            <span style={{ color: "var(--theme)", fontSize: "2.5rem" }}>.</span>
+            <span style={{ color: "var(--theme)" }}>.</span>
           </motion.h1>
         </Link>
         <motion.h1
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
+          style={{ color: "var(--theme)" }}
         >
-          Aryan
-          <span style={{ color: "var(--theme)" }}> Teng</span>
+          Aryan Teng
         </motion.h1>
       </div>
       <motion.p

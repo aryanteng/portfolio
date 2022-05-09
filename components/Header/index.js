@@ -89,9 +89,7 @@ export default function Header() {
             className={styles.Heading}
           >
             Portfolio
-            <span style={{ color: "var(--theme)", fontSize: "2.5srem" }}>
-              .
-            </span>
+            <span style={{ color: "var(--theme)" }}>.</span>
           </motion.h1>
         </Link>
 
